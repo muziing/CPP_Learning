@@ -107,3 +107,7 @@
 3. [vector存放自定义数据类型.cpp](./Chapter_04_STL_容器/03_vector存放自定义数据类型.cpp)
 4. [vector容器嵌套容器.cpp](./Chapter_04_STL_容器/04_vector容器嵌套容器.cpp)
 5. [string_构造函数.cpp](./Chapter_04_STL_容器/05_string_构造函数.cpp)
+6. [string_赋值操作.cpp](Chapter_04_STL_容器/06_string_赋值操作.cpp)
+7. [string_字符串拼接.cpp](Chapter_04_STL_容器/07_string_字符串拼接.cpp)
+8. [string_查找与替换.cpp](Chapter_04_STL_容器/08_string_查找与替换.cpp)
+9. [string_字符串比较.cpp](Chapter_04_STL_容器/09_string_字符串比较.cpp)
