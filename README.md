@@ -25,7 +25,6 @@
 
 ### [Chapter 02：面向对象编程](./Chapter_02_面向对象编程)
 
-0. [blank_templet.cpp](./Chapter_02_面向对象编程/00_blank_templet.cpp)
 1. [内存四区_全局区.cpp](./Chapter_02_面向对象编程/01_内存四区_全局区.cpp)
 2. [内存四区_栈区.cpp](./Chapter_02_面向对象编程/02_内存四区_栈区.cpp)
 3. [内存四区_堆区.cpp](./Chapter_02_面向对象编程/03_内存四区_堆区.cpp)
@@ -82,7 +81,6 @@
 
 ### [Chapter 03：模板](./Chapter_03_模板)
 
-0. [blank_templet.cpp](./Chapter_03_模板/00_blank_templet.cpp)
 1. [函数模板基本语法.cpp](./Chapter_03_模板/01_函数模板基本语法.cpp)
 2. [函数模板注意事项.cpp](./Chapter_03_模板/02_函数模板注意事项.cpp)
 3. [函数模板案例_数组排序.cpp](./Chapter_03_模板/03_函数模板案例_数组排序.cpp)
@@ -101,7 +99,6 @@
 
 ### [Chapter 04：STL容器](./Chapter_04_STL_容器)
 
-0. [blank_templet.cpp](./Chapter_04_STL_容器/00_blank_templet.cpp)
 1. [STL基本概念.md](./Chapter_04_STL_容器/01_STL基本概念.md)
 2. [vector存放内置数据类型.cpp](./Chapter_04_STL_容器/02_vector存放内置数据类型.cpp)
 3. [vector存放自定义数据类型.cpp](./Chapter_04_STL_容器/03_vector存放自定义数据类型.cpp)
@@ -121,3 +118,10 @@
 17. [vector_数据存取.cpp](Chapter_04_STL_容器/17_vector_数据存取.cpp)
 18. [vector_互换容器](Chapter_04_STL_容器/18_vector_互换容器.cpp)
 19. [vector_预留空间.cpp](Chapter_04_STL_容器/19_vector_预留空间.cpp)
+20. [deque_构造函数.cpp](Chapter_04_STL_容器/20_deque_构造函数.cpp)
+21. [deque_赋值操作.cpp](Chapter_04_STL_容器/21_deque_赋值操作.cpp)
+22. [deque_大小操作.cpp](Chapter_04_STL_容器/22_deque_大小操作.cpp)
+23. [deque_插入与删除.cpp](Chapter_04_STL_容器/23_deque_插入与删除.cpp)
+24. [deque_数据存取.cpp](Chapter_04_STL_容器/24_deque_数据存取.cpp)
+25. [deque_排序.cpp](Chapter_04_STL_容器/25_deque_排序.cpp)
+26. [案例_评委打分.cpp](Chapter_04_STL_容器/26_案例_评委打分.cpp)
