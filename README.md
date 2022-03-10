@@ -147,3 +147,13 @@
 46. [map_插入与删除.cpp](Chapter_04_STL_容器/46_map_插入与删除.cpp)
 47. [map_查找与统计.cpp](Chapter_04_STL_容器/47_map_查找与统计.cpp)
 48. [map_排序.cpp](Chapter_04_STL_容器/48_map_排序.cpp)
+49. [案例_员工分组.cpp](Chapter_04_STL_容器/49_案例_员工分组.cpp)
+
+### [Chapter 05：STL函数对象](./Chapter_05_STL_函数对象)
+
+1. [函数对象_基本使用.cpp](Chapter_05_STL_函数对象/01_函数对象_基本使用.cpp)
+2. [谓词_一元谓词.cpp](Chapter_05_STL_函数对象/02_谓词_一元谓词.cpp)
+3. [谓词_二元谓词.cpp](Chapter_05_STL_函数对象/03_谓词_二元谓词.cpp)
+4. [内建函数对象_算数仿函数.cpp](Chapter_05_STL_函数对象/04_内建函数对象_算数仿函数.cpp)
+5. [内建函数对象_关系仿函数.cpp](Chapter_05_STL_函数对象/05_内建函数对象_关系仿函数.cpp)
+6. [内建函数对象_逻辑仿函数.cpp](Chapter_05_STL_函数对象/06_内建函数对象_逻辑仿函数.cpp)
