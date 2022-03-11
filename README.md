@@ -157,3 +157,7 @@
 4. [内建函数对象_算数仿函数.cpp](Chapter_05_STL_函数对象/04_内建函数对象_算数仿函数.cpp)
 5. [内建函数对象_关系仿函数.cpp](Chapter_05_STL_函数对象/05_内建函数对象_关系仿函数.cpp)
 6. [内建函数对象_逻辑仿函数.cpp](Chapter_05_STL_函数对象/06_内建函数对象_逻辑仿函数.cpp)
+
+### [Chapter 06:STL常用算法](./Chapter_06_STL_常用算法/)
+
+1. [遍历_for_each.cpp](Chapter_06_STL_常用算法/01_遍历_for_each.cpp)
