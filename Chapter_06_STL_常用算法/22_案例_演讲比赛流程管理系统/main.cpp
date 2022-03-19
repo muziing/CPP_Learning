@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#include "speechManager.h"
 
 // 案例需求
 /*
@@ -23,6 +22,31 @@ using namespace std;
 
 int main()
 {
+    SpeechManager sm;
+
+    int choice = 0;
+
+    while (true)
+    {
+        sm.show_Menu();
+        cout << "请输入选择: " << endl;
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1: // 开始比赛
+            break;
+        case 2: // 查看记录
+            break;
+        case 3: // 清空记录
+            break;
+        case 0: // 退出系统
+            break;
+
+        default:
+            break;
+        }
+    }
 
     return 0;
 }
