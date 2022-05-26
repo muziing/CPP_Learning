@@ -1,6 +1,63 @@
 #include <iostream>
+#include <fstream>
+#include "identity.h"
+#include "globalFile.h"
 using namespace std;
-#include "student.h"
+
+// 登陆功能
+void SignIn(string filename, int type)
+{
+    Identity *person = NULL;
+
+    ifstream ifs;
+    ifs.open(filename, ios::in);
+
+    // 文件不存在情况
+    if (!ifs.is_open())
+    {
+        cout << "文件不存在" << endl;
+        ifs.close();
+        return;
+    }
+
+    int id = 0;
+    string name;
+    string pwd;
+
+    if (type == 1) // 学生登陆
+    {
+        cout << "请输入学号：" << endl;
+        cin >> id;
+    }
+    else if (type == 2) // 教师登陆
+    {
+        cout << "请输入职工号：" << endl;
+        cin >> id;
+    }
+
+    cout << "请输入用户名：" << endl;
+    cin >> name;
+    cout << "请输入密码：" << endl;
+    cin >> pwd;
+
+    if (type == 1)
+    {
+        // 学生登陆验证
+    }
+    else if (type == 2)
+    {
+        // 教师登陆验证
+    }
+    else if (type == 3)
+    {
+        // 管理员登陆验证
+    }
+
+    cout << "验证登陆失败！" << endl;
+
+    system("clear");
+    return;
+}
 
 int main()
 {
@@ -29,11 +86,13 @@ int main()
         switch (select)
         {
         case 1: // 学生身份
-            /* code */
+            SignIn(STUDENT_FILE, 1);
             break;
         case 2: // 老师身份
+            SignIn(TEACHER_FILE, 2);
             break;
         case 3: // 管理员身份
+            SignIn(ADMIN_FILE, 3);
             break;
         case 0: // 退出系统
             cout << "欢迎下一次使用" << endl;
