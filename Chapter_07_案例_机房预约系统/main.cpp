@@ -1,10 +1,47 @@
-#include <iostream>
-#include <fstream>
-#include "globalFile.h"
 #include "student.h"
 #include "teacher.h"
 #include "manager.h"
-using namespace std;
+
+// 管理员菜单
+void managerMenu(Manager *&manager)
+{
+    while (true)
+    {
+        // 管理员菜单
+        manager->operMenu();
+
+        int select = 0;
+        cin >> select;
+
+        if (select == 1) // 添加帐号
+        {
+            cout << "添加帐号" << endl;
+            manager->addPerson();
+        }
+        else if (select == 2) // 查看帐号
+        {
+            cout << "查看帐号" << endl;
+            manager->showPerson();
+        }
+        else if (select == 3) // 查看机房
+        {
+            cout << "查看机房" << endl;
+            manager->showComputer();
+        }
+        else if (select == 4) // 清空预约
+        {
+            cout << "清空预约" << endl;
+            manager->cleanFile();
+        }
+        else
+        {
+            delete manager;
+            system("clear");
+            cout << "注销成功" << endl;
+            return;
+        }
+    }
+}
 
 // 登陆功能
 void SignIn(string filename, int type)
@@ -89,6 +126,8 @@ void SignIn(string filename, int type)
                 system("clear");
                 cout << "验证登陆成功！" << endl;
                 person = new Manager(name, pwd);
+                Manager *manager = (Manager *)person; // 转换数据类型
+                managerMenu(manager);
                 return;
             }
         }

@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <fstream>
+#include "globalFile.h"
+
 using namespace std;
 
 // 身份抽象类
