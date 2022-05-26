@@ -1,7 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include "identity.h"
 #include "globalFile.h"
+#include "student.h"
+#include "teacher.h"
+#include "manager.h"
 using namespace std;
 
 // 登陆功能
@@ -43,19 +45,58 @@ void SignIn(string filename, int type)
     if (type == 1)
     {
         // 学生登陆验证
+        int fId;
+        string fName;
+        string fPwd;
+        while (ifs >> fId && ifs >> fName && ifs >> fPwd)
+        {
+            if (id == fId && name == fName && pwd == fPwd)
+            {
+                system("clear");
+                cout << "学生验证登陆成功" << endl;
+                person = new Student(id, name, pwd);
+
+                return;
+            }
+        }
     }
     else if (type == 2)
     {
         // 教师登陆验证
+        int fId;
+        string fName;
+        string fPwd;
+        while (ifs >> fId && ifs >> fName && ifs >> fPwd)
+        {
+            if (id == fId && name == fName && pwd == fPwd)
+            {
+                system("clear");
+                cout << "教师登陆验证成功" << endl;
+                person = new Teacher(id, name, pwd);
+                return;
+            }
+        }
     }
     else if (type == 3)
     {
         // 管理员登陆验证
+        string fName;
+        string fPwd;
+        while (ifs >> fName && ifs >> fPwd)
+        {
+            if (name == fName && pwd == fPwd)
+            {
+                system("clear");
+                cout << "验证登陆成功！" << endl;
+                person = new Manager(name, pwd);
+                return;
+            }
+        }
     }
 
+    system("clear");
     cout << "验证登陆失败！" << endl;
 
-    system("clear");
     return;
 }
 
@@ -99,8 +140,8 @@ int main()
             return 0;
             break;
         default:
-            cout << "输入有误，请重新选择！" << endl;
             system("clear");
+            cout << "输入有误，请重新选择！" << endl;
             break;
         }
     }
