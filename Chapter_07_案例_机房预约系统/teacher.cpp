@@ -8,6 +8,9 @@ Teacher::Teacher()
 // 有参构造
 Teacher::Teacher(int empId, string name, string pwd)
 {
+    this->m_EmpId = empId;
+    this->m_Name = name;
+    this->m_Pwd = pwd;
 }
 
 // 菜单界面
