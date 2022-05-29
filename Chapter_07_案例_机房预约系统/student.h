@@ -27,4 +27,10 @@ public:
     // 学生学号
     int m_Id;
 
+private:
+    // 机房容器
+    vector<ComputerRoom> vCom;
+
+    // 获取机房信息
+    void initVector();
 };

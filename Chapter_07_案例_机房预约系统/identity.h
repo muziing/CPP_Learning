@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include "globalFile.h"
+#include "computerRoom.h"
 
 using namespace std;
 

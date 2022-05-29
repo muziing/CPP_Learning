@@ -1,9 +1,7 @@
 #pragma once
-#include <vector>
 #include "identity.h"
 #include "student.h"
 #include "teacher.h"
-#include "computerRoom.h"
 
 class Manager : public Identity
 {
