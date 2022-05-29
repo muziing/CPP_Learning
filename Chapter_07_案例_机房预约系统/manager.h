@@ -3,6 +3,7 @@
 #include "identity.h"
 #include "student.h"
 #include "teacher.h"
+#include "computerRoom.h"
 
 class Manager : public Identity
 {
@@ -40,4 +41,7 @@ private:
 
     // 初始化容器
     void initVector();
+
+    // 机房容器
+    vector<ComputerRoom> vCom;
 };

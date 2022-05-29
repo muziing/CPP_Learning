@@ -1,4 +1,15 @@
+#include <algorithm>
 #include "manager.h"
+
+void printStudent(Student &s)
+{
+    cout << "学号：" << s.m_Id << "姓名：" << s.m_Name << "密码：" << s.m_Pwd << endl;
+}
+
+void printTeacher(Teacher &t)
+{
+    cout << "职工号：" << t.m_EmpId << "姓名：" << t.m_Name << "密码：" << t.m_Pwd << endl;
+}
 
 Manager::Manager()
 {
@@ -116,14 +127,44 @@ void Manager::addPerson()
 
 void Manager::showPerson()
 {
+    cout << "请选择查看内容：" << endl;
+    cout << "1.查看所有学生" << endl;
+    cout << "2.查看所有老师" << endl;
+
+    int select = 0;
+    cin >> select;
+
+    system("clear");
+
+    if (select == 1)
+    {
+        cout << "全部学生信息如下：" << endl;
+        for_each(vStu.begin(), vStu.end(), printStudent);
+    }
+    else if (select == 2)
+    {
+        cout << "全部教师信息如下：" << endl;
+        for_each(vTea.begin(), vTea.end(), printTeacher);
+    }
 }
 
 void Manager::showComputer()
 {
+    system("clear");
+    cout << "机房信息如下：" << endl;
+    for (vector<ComputerRoom>::iterator it = vCom.begin(); it != vCom.end(); it++)
+    {
+        cout << "机房编号：" << it->m_ComId << "机房最大容量：" << it->m_MaxNum << endl;
+    }
 }
 
 void Manager::cleanFile()
 {
+    ofstream ofs(ORDER_FILE, ios::trunc);
+    ofs.close();
+
+    system("clear");
+    cout << "清空成功！" << endl;
 }
 
 void Manager::initVector()
@@ -158,6 +199,17 @@ void Manager::initVector()
     }
     cout << "当前教师数量为：" << vTea.size() << endl;
 
+    ifs.close();
+
+    // 机房信息
+    ifs.open(COMPUTER_FILE, ios::in);
+
+    ComputerRoom c;
+    while (ifs >> c.m_ComId && ifs >> c.m_MaxNum)
+    {
+        vCom.push_back(c);
+    }
+    cout << "当前机房数量为：" << vCom.size() << endl;
     ifs.close();
 }
 
