@@ -83,7 +83,7 @@ void OrderFile::updateOrder()
         ofs << "stuId:" << this->m_orderData[i]["stuId"] << " ";
         ofs << "stuName:" << this->m_orderData[i]["stuName"] << " ";
         ofs << "roomId:" << this->m_orderData[i]["roomId"] << " ";
-        ofs << "status:" << this->m_orderData[i]["statis"] << " ";
+        ofs << "status:" << this->m_orderData[i]["status"] << endl;
     }
     ofs.close();
 }
