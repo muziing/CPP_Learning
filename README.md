@@ -181,3 +181,15 @@
 19. [集合_set_intersection.cpp](Chapter_06_STL_常用算法/19_集合_set_intersection.cpp)
 20. [集合_set_union.cpp](Chapter_06_STL_常用算法/20_集合_set_union.cpp)
 21. [集合_set_difference.cpp](Chapter_06_STL_常用算法/21_集合_set_difference.cpp)
+
+### [Chapter 07：案例-机房预约系统](./Chapter_07_案例_机房预约系统)
+
+## 代码统计
+
+代码统计工具：github.com/AlDanial/cloc v1.92
+
+| 语言         | 文件 | 空行 | 注释 | 代码 |
+| ------------ | ---- | ---- | ---- | ---- |
+| C++          | 167  | 1581 | 1689 | 6969 |
+| C/C++ Header | 16   | 86   | 94   | 305  |
+| **总计**     | 183  | 1667 | 1783 | 7274 |
