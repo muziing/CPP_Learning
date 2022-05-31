@@ -80,6 +80,37 @@ void studentMenu(Student *&student)
     }
 }
 
+// 教师菜单
+void TeacherMenu(Teacher *&teacher)
+{
+    while (true)
+    {
+        teacher->operMenu();
+
+        int select = 0;
+
+        cin >> select;
+
+        if (select == 1)
+        {
+            // 查看所有预约
+            teacher->showAllOrder();
+        }
+        else if (select == 2)
+        {
+            // 审核预约
+            teacher->validOrder();
+        }
+        else
+        {
+            delete teacher;
+            system("clear");
+            cout << "注销成功" << endl;
+            return;
+        }
+    }
+}
+
 // 登陆功能
 void SignIn(string filename, int type)
 {
@@ -148,6 +179,8 @@ void SignIn(string filename, int type)
                 system("clear");
                 cout << "教师登陆验证成功" << endl;
                 person = new Teacher(id, name, pwd);
+                Teacher *teacher = (Teacher *)person; // 转换数据类型
+                TeacherMenu(teacher);
                 return;
             }
         }
@@ -179,6 +212,7 @@ void SignIn(string filename, int type)
 
 int main()
 {
+    system("clear");
     int select = 0; // 用于接收用户的选择
 
     while (true)

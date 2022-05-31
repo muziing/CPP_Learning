@@ -1,5 +1,6 @@
 #pragma once
 #include "identity.h"
+#include "orderFile.h"
 
 class Teacher : public Identity
 {
