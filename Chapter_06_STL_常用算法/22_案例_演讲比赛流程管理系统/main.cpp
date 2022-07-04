@@ -35,15 +35,18 @@ int main()
         switch (choice)
         {
         case 1: // 开始比赛
+            sm.startSpeech();
             break;
         case 2: // 查看记录
             break;
         case 3: // 清空记录
             break;
         case 0: // 退出系统
+            sm.exitSystem();
             break;
 
         default:
+            system("clear");
             break;
         }
     }
