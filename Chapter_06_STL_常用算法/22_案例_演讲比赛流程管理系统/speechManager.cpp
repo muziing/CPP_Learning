@@ -68,6 +68,7 @@ void SpeechManager::startSpeech()
     speechDraw();
 
     // 2.比赛
+    speechContest();
 
     // 3.显示晋级结果
 
@@ -107,4 +108,73 @@ void SpeechManager::speechDraw()
     }
     cout << "------------------------------" << endl;
     cout << endl;
+}
+
+void SpeechManager::speechContest()
+{
+    cout << "---------------- 第" << this->m_Index << "轮比赛开始 ----------------" << endl;
+    multimap<double, int, greater<double>> groupScore; // 临时容器，保存key分数 value选手编号
+
+    int num = 0; // 记录参赛人数，6个为1组
+
+    vector<int> v_Src; // 比赛的人员容器
+    if (this->m_Index == 1)
+    {
+        v_Src = v1;
+    }
+    else
+    {
+        v_Src = v2;
+    }
+
+    // 遍历所有参赛选手
+    for (vector<int>::iterator it = v_Src.begin(); it != v_Src.end(); it++)
+    {
+        num++;
+        // 评委打分
+        deque<double> d;
+        for (int i = 0; i < 10; i++)
+        {
+            double score = (rand() % 401 + 600) / 10.f; // 600 ~ 100
+            d.push_back(score);
+        }
+
+        sort(d.begin(), d.end(), greater<double>());       // 排序
+        d.pop_front();                                     // 去掉最高分
+        d.pop_back();                                      // 去掉最低分
+        double sum = accumulate(d.begin(), d.end(), 0.0f); // 获取总分
+        double avg = sum / (double)d.size();               // 获取平均分
+
+        // 每个人平均分
+        this->m_Speaker[*it].m_Score[this->m_Index - 1] = avg;
+
+        // 6个人一组，用临时容器保存
+        groupScore.insert(make_pair(avg, *it));
+        if (num % 6 == 0)
+        {
+            cout << "第" << num / 6 << "小组比赛名次：" << endl;
+            for (multimap<double, int, greater<double>>::iterator it = groupScore.begin(); it != groupScore.end(); it++)
+            {
+                cout << "编号：" << it->second << "姓名：" << this->m_Speaker[it->second].m_Name
+                     << " 成绩：" << this->m_Speaker[it->second].m_Score[this->m_Index - 1] << endl;
+            }
+            int count = 0;
+
+            // 取前三名
+            for (multimap<double, int, greater<double>>::iterator it = groupScore.begin(); it != groupScore.end() && count < 3; it++, count++)
+            {
+                if (this->m_Index == 1)
+                {
+                    v2.push_back((*it).second);
+                }
+                else
+                {
+                    vVictory.push_back((*it).second);
+                }
+            }
+            groupScore.clear();
+            cout << endl;
+        }
+    }
+    cout << "---------------- 第" << this->m_Index << "轮比赛完毕 ----------------\n\n" << endl;
 }

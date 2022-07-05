@@ -2,7 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <deque>
 #include <algorithm>
+#include <numeric>
 #include "speaker.h"
 
 using namespace std;
@@ -38,6 +40,7 @@ public:
     // 记录比赛轮数
     int m_Index;
 
+    // 退出系统
     void exitSystem();
 
     // 初始化
@@ -51,4 +54,7 @@ public:
 
     // 抽签
     void speechDraw();
+
+    // 比赛
+    void speechContest();
 };
