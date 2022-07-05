@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <map>
 #include <deque>
@@ -60,4 +61,22 @@ public:
 
     // 显示得分
     void showScore();
+
+    // 保存记录
+    void saveRecord();
+
+    // 读取记录
+    void loadRecord();
+
+    // 文件为空的标志
+    bool fileIsEmpty;
+
+    // 往届记录
+    map<int, vector<string>> m_Record;
+
+    // 显示往届得分
+    void showRecord();
+
+    // 清空记录
+    void clearRecord();
 };
