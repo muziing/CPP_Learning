@@ -28,7 +28,7 @@ int main()
 
     while (true)
     {
-        sm.show_Menu();
+        sm.showMenu();
         cout << "请输入选择: " << endl;
         cin >> choice;
 

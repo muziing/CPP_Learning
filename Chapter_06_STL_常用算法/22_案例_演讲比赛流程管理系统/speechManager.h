@@ -21,8 +21,6 @@ class SpeechManager
 public:
     SpeechManager();
 
-    void show_Menu();
-
     ~SpeechManager();
 
     // 比赛选手容器 12人
@@ -39,6 +37,8 @@ public:
 
     // 记录比赛轮数
     int m_Index;
+
+    void showMenu();
 
     // 退出系统
     void exitSystem();
@@ -57,4 +57,7 @@ public:
 
     // 比赛
     void speechContest();
+
+    // 显示得分
+    void showScore();
 };

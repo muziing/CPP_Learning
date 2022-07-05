@@ -18,7 +18,7 @@ void SpeechManager::exitSystem()
     exit(0);
 }
 
-void SpeechManager::show_Menu()
+void SpeechManager::showMenu()
 {
     cout << "******************************" << endl;
     cout << "****** 欢迎参加演讲比赛 ******" << endl;
@@ -71,21 +71,22 @@ void SpeechManager::startSpeech()
     speechContest();
 
     // 3.显示晋级结果
+    showScore();
 
     // 第二轮比赛
+    m_Index++;
     // 1.抽签
-
+    speechDraw();
     // 2.比赛
-
+    speechContest();
     // 3.显示最终结果
-
+    showScore();
     // 4.保存分数
 }
 
 void SpeechManager::speechDraw()
 {
-    system("clear");
-    cout << "第 <<" << this->m_Index << ">> 轮选手正在抽签" << endl;
+    cout << "第 <" << this->m_Index << "> 轮选手正在抽签" << endl;
     cout << "------------------------------" << endl;
     cout << "抽签后演讲顺序如下：" << endl;
     if (this->m_Index == 1)
@@ -176,5 +177,27 @@ void SpeechManager::speechContest()
             cout << endl;
         }
     }
-    cout << "---------------- 第" << this->m_Index << "轮比赛完毕 ----------------\n\n" << endl;
+    cout << "---------------- 第" << this->m_Index << "轮比赛完毕 ----------------\n\n"
+         << endl;
+}
+
+void SpeechManager::showScore()
+{
+    cout << "--------第" << this->m_Index << "轮晋级选手信息如下：-----------" << endl;
+    vector<int> v;
+    if (this->m_Index == 1)
+    {
+        v = v2;
+    }
+    else
+    {
+        v = vVictory;
+    }
+
+    for (vector<int>::iterator it = v.begin(); it != v.end(); it++)
+    {
+        cout << "编号：" << *it << "姓名：" << this->m_Speaker[*it].m_Name
+             << " 成绩：" << this->m_Speaker[*it].m_Score[this->m_Index - 1] << endl;
+    }
+    cout << endl;
 }
