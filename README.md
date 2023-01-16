@@ -191,6 +191,16 @@
 
 ### [Chapter 08：模板（进阶）](Chapter_08_模板_进阶)
 
+1. 模板起源
+   - [01_typed.cpp](Chapter_08_模板_进阶/01_typed.cpp) - 静态类型语言带来的劣势
+   - [02_untyped.cpp](Chapter_08_模板_进阶/02_untyped.cpp) - 宏可摆脱数据类型的限制
+   - [03_macro.cpp](Chapter_08_模板_进阶/03_macro.cpp) - 利用宏构建通用函数框架
+2. 函数模板
+3. 函数模板扩展
+4. 类模板
+5. 类模板扩展
+6. 类模板典型错误
+
 ## 代码统计
 
 代码统计工具：github.com/AlDanial/cloc v1.92
