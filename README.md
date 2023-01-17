@@ -196,6 +196,7 @@
    - [02_untyped.cpp](Chapter_08_模板_进阶/02_untyped.cpp) - 宏可摆脱数据类型的限制
    - [03_macro.cpp](Chapter_08_模板_进阶/03_macro.cpp) - 利用宏构建通用函数框架
 2. 函数模板
+   - [04_functmpl.cpp](Chapter_08_模板_进阶/04_functmpl.cpp) - 函数模板的定义、使用、分析、实例化条件
 3. 函数模板扩展
 4. 类模板
 5. 类模板扩展
