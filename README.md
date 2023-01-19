@@ -198,6 +198,8 @@
 2. 函数模板
    - [04_functmpl.cpp](Chapter_08_模板_进阶/04_functmpl.cpp) - 函数模板的定义、使用、分析、实例化条件
 3. 函数模板扩展
+   - [05_double_compile.cpp](Chapter_08_模板_进阶/05_double_compile.cpp) - 关于函数模板的两次编译
+   - [06_deduction.cpp](Chapter_08_模板_进阶/) - 隐式推断类型实参
 4. 类模板
 5. 类模板扩展
 6. 类模板典型错误
