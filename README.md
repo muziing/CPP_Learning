@@ -214,6 +214,7 @@
    - [16_membervar.cpp](Chapter_08_模板_进阶/16_membervar.cpp) - 模板技巧-模板型成员变量
    - [17_memberfunc.cpp](Chapter_08_模板_进阶/17_memberfunc.cpp) - 模板技巧-模板型成员函数
    - [18_membertype.cpp](Chapter_08_模板_进阶/18_membertype.cpp) - 模板技巧-模板型成员类型
+   - [19_tmplargs.cpp](Chapter_08_模板_进阶/19_tmplargs.cpp) - 模板技巧-模板型模板参数
 6. 类模板典型错误
 
 ## 代码统计
