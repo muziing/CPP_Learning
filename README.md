@@ -211,6 +211,9 @@
    - [13_partial.cpp](Chapter_08_模板_进阶/13_partial.cpp) - 局部特化
    - [14_default.cpp](Chapter_08_模板_进阶/14_default.cpp) - 类型形参的缺省值
    - [15_valparam.cpp](Chapter_08_模板_进阶/15_valparam.cpp) - 数值形式的模板参数
+   - [16_membervar.cpp](Chapter_08_模板_进阶/16_membervar.cpp) - 模板技巧-模板型成员变量
+   - [17_memberfunc.cpp](Chapter_08_模板_进阶/17_memberfunc.cpp) - 模板技巧-模板型成员函数
+   - [18_membertype.cpp](Chapter_08_模板_进阶/18_membertype.cpp) - 模板技巧-模板型成员类型
 6. 类模板典型错误
 
 ## 代码统计
