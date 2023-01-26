@@ -207,6 +207,7 @@
    - [10_static.cpp](Chapter_08_模板_进阶/10_static.cpp) - 类模板中的静态成员
    - [11_recursion.cpp](Chapter_08_模板_进阶/11_recursion.cpp) - 类模板的递归实例化
 5. 类模板扩展
+   - [12_special.cpp](Chapter_08_模板_进阶/12_special.cpp) - 全局特化
 6. 类模板典型错误
 
 ## 代码统计
