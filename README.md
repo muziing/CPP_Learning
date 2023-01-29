@@ -216,6 +216,8 @@
    - [18_membertype.cpp](Chapter_08_模板_进阶/18_membertype.cpp) - 模板技巧-模板型成员类型
    - [19_tmplargs.cpp](Chapter_08_模板_进阶/19_tmplargs.cpp) - 模板技巧-模板型模板参数
 6. 类模板典型错误
+   - [20_nested_dependency.cpp](Chapter_08_模板_进阶/20_nested_dependency.cpp) - 嵌套依赖
+   - [21_temperror.cpp](Chapter_08_模板_进阶/21_temperror.cpp) - 依赖模板参数访问成员函数模板
 
 ## 代码统计
 
