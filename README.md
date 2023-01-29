@@ -218,6 +218,8 @@
 6. 类模板典型错误
    - [20_nested_dependency.cpp](Chapter_08_模板_进阶/20_nested_dependency.cpp) - 嵌套依赖
    - [21_temperror.cpp](Chapter_08_模板_进阶/21_temperror.cpp) - 依赖模板参数访问成员函数模板
+   - [22_this.cpp](Chapter_08_模板_进阶/22_this.cpp) - 子类模板访问基类模板
+   - [23_init.cpp](Chapter_08_模板_进阶/23_init.cpp) - 零值初始化
 
 ## 代码统计
 
