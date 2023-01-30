@@ -13,7 +13,7 @@
 笔记与课程对应关系：
 
 - Chapter 01~07 - [黑马程序员-C++教程从0到1入门](https://www.bilibili.com/video/BV1et411b73Z/)
-- Chapter 08 - [达内-C++STL标准模板库教程](https://www.bilibili.com/video/BV1mP4y1o7bA/)
+- Chapter 08~09 - [达内-C++STL标准模板库教程](https://www.bilibili.com/video/BV1mP4y1o7bA/)
 
 ### [Chapter 01：基础语法](Chapter_01_基础语法)
 
@@ -221,6 +221,8 @@
    - [22_this.cpp](Chapter_08_模板_进阶/22_this.cpp) - 子类模板访问基类模板
    - [23_init.cpp](Chapter_08_模板_进阶/23_init.cpp) - 零值初始化
    - [24_virtual.cpp](Chapter_08_模板_进阶/24_virtual.cpp) - 类模板中的成员虚函数
+
+### [Chapter 09：自行实现一个链表容器](Chapter_09_实现链表容器)
 
 ## 代码统计
 
