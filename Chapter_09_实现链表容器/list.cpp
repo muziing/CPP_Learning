@@ -323,6 +323,92 @@ void print(string const &str, list<int> &l)
          << "--------------------" << endl;
 }
 
+// 快速排序（"<"）
+template <typename IT>
+void sort(IT const &begin, IT const &end)
+{
+    IT p = begin;
+    IT last = end;
+    --last;
+    for (IT i = begin, j = last; i != j;)
+    {
+        while (i != p && *i < *p)
+        {
+            ++i;
+        }
+        if (i != p)
+        {
+            swap(*i, *p);
+            p = i;
+        }
+        while (j != p && *p < *j)
+        {
+            --j;
+        }
+        if (j != p)
+        {
+            swap(*p, *j);
+            p = j;
+        }
+    }
+    IT it = begin;
+    ++it;
+    if (p != begin && p != it)
+        sort(begin, p);
+    it = p;
+    ++it;
+    if (it != end && it != last)
+        sort(it, end);
+}
+
+// 快速排序（比较器）
+template <typename IT, typename CMP>
+void sort(IT const &begin, IT const &end, CMP cmp)
+{
+    IT p = begin;
+    IT last = end;
+    --last;
+    for (IT i = begin, j = last; i != j;)
+    {
+        while (i != p && cmp(*i, *p))
+        {
+            ++i;
+        }
+        if (i != p)
+        {
+            swap(*i, *p);
+            p = i;
+        }
+        while (j != p && cmp(*p, *j))
+        {
+            --j;
+        }
+        if (j != p)
+        {
+            swap(*p, *j);
+            p = j;
+        }
+    }
+    IT it = begin;
+    ++it;
+    if (p != begin && p != it)
+        sort(begin, p, cmp);
+    it = p;
+    ++it;
+    if (it != end && it != last)
+        sort(it, end, cmp);
+}
+
+// 比较类
+class CMP
+{
+public:
+    bool operator()(int const &a, int const &b)
+    {
+        return a > b;
+    }
+};
+
 int main()
 {
     list<int> ls;
@@ -369,6 +455,11 @@ int main()
     CIT cit = cls.begin();
     // *cit = 900; // 不可修改，会报错
     */
+
+    // sort(ls.begin(), ls.end());
+    CMP cmp; // 比较器
+    sort(ls.begin(), ls.end(), cmp);
+    print("排序后：", ls);
 
     return 0;
 }
