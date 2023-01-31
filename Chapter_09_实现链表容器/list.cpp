@@ -284,6 +284,20 @@ public:
     }
 };
 
+// 比较查找（利用==）
+template <typename IT, typename T>
+IT find(IT const &a, IT const &b, T const &data)
+{
+    for (IT it = a; it != b; ++it)
+    {
+        if (*it == data)
+        {
+            return it;
+        }
+    }
+    return b;
+}
+
 // 以上代码模拟容器
 // -----------------------
 // 以下代码模拟普通用户使用
@@ -337,6 +351,12 @@ int main()
     *it = 800;
     print("更改迭代器指向的节点后：", ls);
 
+    IT fit = find(ls.begin(), ls.end(), 100);
+    if (fit != ls.end())
+        ls.erase(fit);
+    print("找到100并删除后：", ls);
+
+    /*
     const list<int> cls(ls);
     typedef list<int>::const_iterator CIT;
     for (CIT cit = cls.begin(); cit != cls.end(); ++cit)
@@ -348,6 +368,7 @@ int main()
 
     CIT cit = cls.begin();
     // *cit = 900; // 不可修改，会报错
+    */
 
     return 0;
 }
