@@ -238,6 +238,50 @@ public:
             m_tail = pdel->m_prev;
         delete pdel;
     }
+
+    // 正向常迭代类
+    class const_iterator
+    {
+    public:
+        const_iterator(iterator const &it) : m_it(it) {}
+        T const &operator*()
+        {
+            return *m_it;
+        }
+        const_iterator &operator++()
+        {
+            ++m_it;
+            return *this;
+        }
+        const_iterator &operator--()
+        {
+            --m_it;
+            return *this;
+        }
+        bool operator==(const_iterator const &that) const
+        {
+            return m_it == that.m_it;
+        }
+        bool operator!=(const_iterator const &that) const
+        {
+            return !(*this == that);
+        }
+
+    private:
+        iterator m_it;
+    };
+
+    // 获取起始常迭代器
+    const_iterator begin() const
+    {
+        return iterator(m_head, m_head, m_tail);
+    }
+
+    // 获取终止常迭代器
+    const_iterator end() const
+    {
+        return iterator(m_head, NULL, m_tail);
+    }
 };
 
 // 以上代码模拟容器
@@ -292,6 +336,18 @@ int main()
     IT it = ls.begin();
     *it = 800;
     print("更改迭代器指向的节点后：", ls);
+
+    const list<int> cls(ls);
+    typedef list<int>::const_iterator CIT;
+    for (CIT cit = cls.begin(); cit != cls.end(); ++cit)
+    {
+        cout << *cit << ' ';
+    }
+    cout << endl
+         << "--------------------" << endl;
+
+    CIT cit = cls.begin();
+    // *cit = 900; // 不可修改，会报错
 
     return 0;
 }
